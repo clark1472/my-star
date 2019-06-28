@@ -6,7 +6,7 @@ const Navbar = () => (
     <nav className = "navbar">
         <ul>
             <li className="brand"><a href="/">Clicky Game</a></li>
-            <li className="guess">Click an image to begin</li>
+            <li className="guess">Click an image to begin!</li>
             <li className="score">Score: 0 | Top Score: 0</li>
         </ul>
     </nav>

@@ -1,24 +1,12 @@
 import React from "react";
 import "./Header.css"; 
 
-// const styles = {
-//     header: {
-//         background: "blue"
-//     },
+const Header = () => (
+    <header className="header">
+        <h1>Clicky Game!</h1>
+         {/* want to include logo on js or css file= http://localhost:3007/images/stargateLogo.jpg */}
+        <h2>Click an image. Earn a point. Click each image only once. If you pick image more than once you loose game. If pick all 12 images you win.</h2>
+    </header>
+);
 
-//     head: {
-//         margin: 0,
-//         paddingTop: 75,
-//         textAlign: "center",
-//         color: "white",
-//         fontSize: 100
-//     }
-// }
-
-// const Header = () => (
-//     <header className="header" style={styles.header}>
-//         <h1 style={styles.head}>Welcome</h1>
-//     </header>
-// );
-
-//export default Header;
+export default Header;
