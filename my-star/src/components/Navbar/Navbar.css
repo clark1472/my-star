@@ -6,7 +6,7 @@
 ul {
 	background-color: #305df0;
 	position: fixed;
-	padding-top:60px;
+	padding: 60px 0 0 0;
 	width: 100%;
 }
 
@@ -14,7 +14,7 @@ li {
 	color: #fff;
 	display: inline-block;
 	text-align: center;
-	padding: 30px 30px;
+	padding: 30px;
 	width: 33%;
 	font-size: 24px;
 	font-weight: bold;

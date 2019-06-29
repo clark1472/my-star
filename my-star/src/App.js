@@ -46,7 +46,7 @@ const App = () => (
     <Navbar />
     <Header />
     <div>
-        <Container />
+        <Container image={"././public/images/Apophis"} />
         <Container />
         <Container />
         <Container />

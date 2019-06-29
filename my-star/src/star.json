@@ -3,65 +3,63 @@
     {
       "id": 1,
       "name": "Apophis",
-     "image": "http://localhost:3007/images/Apophis.jpg",
-     "image1": "http://localhost:3007/src/components/Container/images/Apophis.jpg"
+      "image": "Apophis.jpg"
     },
     {
       "id": 2,
       "name": "BraTac",
-      "image": "./images/BraTac.jpg"
-     
+      "image": "BraTac.jpg"
     },
     {
       "id": 3,
       "name": "DanielJackson",
-      "image": "http://localhost:3007/images/DanielJackson.jpg"
+      "image": "DanielJackson.jpg"
      
     },
     {
       "id": 4,
       "name": "GeorgeHammond",
-      "image": "http://localhost:3007/images/GeorgeHammond.jpg"
+      "image": "GeorgeHammond.jpg"
     },
     {
       "id": 5,
       "name": "JackONeill",
-      "image": "http://localhost:3007/images/JackONeill.jpg"
+      "image": "JackONeill.jpg"
     },
     {
       "id": 6,
       "name": "JacobCarter",
-      "image": "http://localhost:3007/images/JacobCarter.jpg"
+      "image": "JacobCarter.jpg"
     },
     {
       "id": 7,
       "name": "JanetFraiser",
-      "image": "http://localhost:3007/images/JanetFraiser.jpg"
+      "image": "JanetFraiser.jpg"
     },
     {
       "id": 8,
       "name": "Jonas Quinn",
-      "image": "http://localhost:3007/images/JonasQuinn.jpg"
+      "image": "JonasQuinn.jpg"
     },
     {
       "id": 9,
       "name": "Samantha Carter",
-      "image": "http://localhost:3007/images/SamanthaCarter.jpg"
+      "image": "SamanthaCarter.jpg"
     },
     {
       "id": 10,
       "name": "ShaRe",
-      "image": "http://localhost:3007/images/ShaRe.jpg"
+      "image": "ShaRe.jpg"
     },
     {
       "id": 11,
       "name": "TealC",
-      "image": "http://localhost:3007/images/TealC.jpg"
+      "image": "TealC.jpg"
     },
     {
       "id": 12,
       "name": "ValMalDoran",
-      "image": "http://localhost:3007/images/ValMalDoran.jpg"
+      "image": "ValMalDoran.jpg"
     }
   ]
   
