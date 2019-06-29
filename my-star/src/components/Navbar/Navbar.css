@@ -1,11 +1,15 @@
-ul{
+.navbar {
+	z-index: 1;
+}
+
+ul {
 	background-color: #305df0;
 	position: fixed;
-	top: 0;
+	/* top: 0; */
 	width: 100%;
 }
 
-li{
+li {
 	color: #fff;
 	display: inline-block;
 	text-align: center;
@@ -15,7 +19,7 @@ li{
 	font-weight: bold;
 }
 
-a{
+a, a:hover {
 	text-decoration: none;
 	color: #FFF;
 }
