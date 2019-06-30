@@ -1,26 +1,46 @@
 .navbar {
-	z-index: 1;
-	padding: 0;
+	background: cyan;
 }
 
-ul {
-	background-color: #305df0;
-	position: fixed;
-	padding: 60px 0 0 0;
-	width: 100%;
+.navbar li {
+	display: inline-block;
+	text-align: center;
+}
+
+.item1 .item3 {
+	width: 15%;
+}
+
+.item2 {
+	width: 70%;
 }
 
 li {
-	color: #fff;
-	display: inline-block;
-	text-align: center;
-	padding: 30px;
-	width: 33%;
-	font-size: 24px;
-	font-weight: bold;
+	color: white;
+	padding: 15px 0 ;
+	
 }
 
-a, a:hover {
-	text-decoration: none;
-	color: #FFF;
-}
+body {
+	font-size: 24px;
+  }
+  
+  .jumbotron{
+	  position: relative;
+	  background-color: #ccc;
+  }
+  
+  .jumbotron h1{
+	  padding-top: 40px;
+	  text-align: center;
+	  font-size: 90px;
+	  font-weight: bold;
+	  padding: 70px 0 20px 0; 
+  }
+  
+  .jumbotron h2{
+	  text-align: center;
+	  font-size: 30px;
+  }
+
+

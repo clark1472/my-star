@@ -1,71 +1,89 @@
-import React from 'react';
+import React, { Component } from 'react';
+import StarCard from "./components/StarCard";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Container from "./components/Container";
-//import star from "./star.json";
-import Footer from "./components/Footer";
+import stars from "./stars.json";
+import "./App.css";
 
 
-// class App extends Component {
-//   // Setting this.state.friends to the friends json array
-//   state = {
-//     friends
-//   };
+class App extends Component {
+  state = {
+    stars,
+    clickedCharacters: [],
+    score: 0
+  };
 
-//   removeFriend = id => {
-//     // Filter this.state.friends for friends with an id not equal to the id being removed
-//     const friends = this.state.friends.filter(friend => friend.id !== id);
-//     // Set this.state.friends equal to the new friends array
-//     this.setState({ friends });
-//   };
+  //check to see if image already picked.
+  imageClick = event => {
+    const currentCharacter = event.target.alt;
+    const characterAlreadyClicked =
+      this.state.clickedCharacters.indexOf(currentCharacter) > -1;
 
-//   // Map over this.state.friends and render a FriendCard component for each friend object
-//   render() {
-//     return (
-//       <Wrapper>
-//         <Title>Friends List</Title>
-//         {this.state.friends.map(friend => (
-//           <FriendCard
-//             removeFriend={this.removeFriend}
-//             id={friend.id}
-//             key={friend.id}
-//             name={friend.name}
-//             image={friend.image}
-//             occupation={friend.occupation}
-//             location={friend.location}
-//           />
-//         ))}
-//       </Wrapper>
-//     );
-//   }
-// }
+    //image already clicked. Start over. Score is back to zero.
+    if (characterAlreadyClicked) {
+      this.setState({
+        stars: this.state.stars.sort(function(a, b) {
+          return 0.5 - Math.random();
+        }),
+        clickedCharacters: [],
+        score: 0
+      });
+      // want to include an alert (character already clicked. You lose, start again!);
 
-const App = () => (
-  
-  <div>
-    <Navbar />
-    <Header />
-    <div>
-        <Container image={"/images/Apophis.jpg"} />
-        <Container />
-        <Container />
-        <Container />
-    </div>
-    <div>
-        <Container />
-        <Container />
-        <Container />
-        <Container />
-    </div>
-    <div>
-        <Container />
-        <Container />
-        <Container />
-        <Container />
-    </div>
-    <Footer />
-  </div>
-  
-);
+      // otherwise continue picking unique character images.
+    } else {
+      this.setState(
+        {
+          star: this.state.stars.sort(function(a, b) {
+            return 0.5 - Math.random();
+          }),
+          //clicked characters are array and the concat is adding a character to the array.
+          clickedCharacters: this.state.clickedCharacters.concat(
+            currentCharacter
+          ),
+          score: this.state.score + 1
+        },
+        () => {
+
+          // if you score 12 characters you win!
+          if (this.state.score === 12) {
+            alert("Yippee! You Win!");
+            this.setState({
+              stars: this.state.stars.sort(function(a, b) {
+                return 0.5 - Math.random();
+              }),
+              //characters zeroed out and new game begins.
+              clickedCharacters: [],
+              score: 0
+            });
+          }
+        }
+      );
+    }
+  };
+
+
+  //Map over this.state.friends and render a FriendCard component for each friend object
+  render() {
+    return (
+      <div>
+        <Navbar
+        score={this.state.score} />
+        <div className="wrapper">
+     {this.state.stars.map(stars => ( 
+          <StarCard
+            imageClick={this.imageClick}
+            id={stars.id}
+            key={stars.id}
+            name={stars.name}
+            image={stars.image}
+          />
+        ))}
+        </div>
+      </div>
+    );
+  }
+}
+
+
 
 export default App;
