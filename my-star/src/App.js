@@ -29,6 +29,7 @@ class App extends Component {
         clickedCharacters: [],
         score: 0
       });
+      alert("Boo Who! You Lose!");
       // want to include an alert (character already clicked. You lose, start again!);
 
       // otherwise continue picking unique character images.
