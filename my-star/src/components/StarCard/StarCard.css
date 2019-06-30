@@ -3,25 +3,19 @@
     border-radius: 2px;
     height: 225px;
     margin: 16px;
-    /* position: relative; */
     width: 225px;
     text-align: left;
   }
   
   .card > .img-container {
-    /* height: 100%; */
-    /* overflow: hidden; */
     text-align: center;
-    /* background:#6CADDC; */
+    
   }
-  /* .card > .img-container > img {
-    width: 100%
-  } */
+  
   
   .card > .content {
     padding-left: 16px;
     padding-right: 16px;
-    /* font-size: 15px; */
   }
   
   .card > .content > ul {

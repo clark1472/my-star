@@ -1,11 +1,11 @@
 import React from "react";
-import "./star.css";
+import "./StarCard.css";
 
 function StarCard(props) {
     return (
         <div className="card">
             <div className="img-container">
-                <img alt={props.name} src={props.image} />
+            <img alt={props.image.replace(".jpg", "")} src={require("../../public/images/" + props.image)} />
             </div>
         </div>
     );
