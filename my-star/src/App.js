@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import StarCard from "./components/StarCard";
 import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
+import StarCard from "./components/StarCard";
+import Footer from "./components/Footer";
 import stars from "./stars.json";
 import "./App.css";
 
@@ -33,7 +35,7 @@ class App extends Component {
     } else {
       this.setState(
         {
-          star: this.state.stars.sort(function(a, b) {
+          stars: this.state.stars.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
           //clicked characters are array and the concat is adding a character to the array.
@@ -62,12 +64,13 @@ class App extends Component {
   };
 
 
-  //Map over this.state.friends and render a FriendCard component for each friend object
+  //Map over this.state.stars and render a StarCard component for each stars object
   render() {
     return (
       <div>
         <Navbar
         score={this.state.score} />
+        <Jumbotron />
         <div className="wrapper">
      {this.state.stars.map(stars => ( 
           <StarCard
@@ -79,6 +82,7 @@ class App extends Component {
           />
         ))}
         </div>
+        <Footer />
       </div>
     );
   }
