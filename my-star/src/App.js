@@ -24,14 +24,14 @@ class App extends Component {
     if (characterAlreadyClicked) {
       this.setState({
         stars: this.state.stars.sort(function(a, b) {
-          return 0.5 - Math.random();
+          return Math.random() - 0.5;
         }),
+        
         clickedCharacters: [],
         score: 0
       });
       alert("Boo Who! You Lose!");
-      // want to include an alert (character already clicked. You lose, start again!);
-
+      
       // otherwise continue picking unique character images.
     } else {
       this.setState(
